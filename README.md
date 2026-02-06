@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# 🏎️ ELVORA MOTORS - Luxury Car Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![React](https://img.shields.io/badge/React-17.0.2-blue?logo=react&logoColor=white)](https://reactjs.org/)
+[![Laravel](https://img.shields.io/badge/Laravel-10-red?logo=laravel&logoColor=white)](https://laravel.com/)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.3.3-teal?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-## Available Scripts
+ELVORA MOTORS is a full-stack premium automotive platform. It provides a high-end experience for users to browse and interact with a luxury car fleet, while offering a powerful, data-driven dashboard for admins to manage the entire business logic.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+##  Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+###  User Side
+- **Modern Landing Page**: Multiple sections showcasing the brand's identity and premium car collections.
+- **Dynamic Product Catalog**: Real-time car listing with advanced caching using React Query.
+- **Deep Linking**: Detailed view for each vehicle with technical specifications and pricing.
+- **Smart Contact System**: Concierge form with three distinct flows: Purchase, Booking, or Selling.
+- **Email Integration**: User requests are sent directly to the admin’s email.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+###  Admin Terminal (Dashboard)
+- **Role-Based Access Control (RBAC)**: Secure authentication; only Admins can access the dashboard.
+- **Comprehensive Overview**: Analytics for total users, daily sign-ups, and monthly growth tracking.
+- **Real-Time Counters**: Admin counts, total products, and stock availability.
+- **User Management**: Complete CRUD operations for platform users.
+- **Fleet Management**: Professional control over car listings, including multi-field forms and image uploading.
+- **Data Portability**: Export user and product tables to Excel files for offline reporting.
+- **Advanced UI**: Integrated pagination and optimized table views for large datasets.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##  Tech Stack & Architecture
+- **Frontend**: React.js, Tailwind CSS (Custom Dark Theme), Framer Motion.
+- **Backend**: Laravel API.
+- **State Management**: TanStack Query (React Query) for efficient caching and synchronization.
+- **API Layer**: Axios Instance with automatic JWT/Sanctum token injection.
+- **Security**: Environment variables (`.env`) for sensitive credentials.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
