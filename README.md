@@ -1,38 +1,159 @@
-# 🏎️ ELVORA MOTORS - Luxury Car Management System
+# ELVORA MOTORS - Luxury Car Management System
 
-[![React](https://img.shields.io/badge/React-17.0.2-blue?logo=react&logoColor=white)](https://reactjs.org/)
-[![Laravel](https://img.shields.io/badge/Laravel-10-red?logo=laravel&logoColor=white)](https://laravel.com/)
-[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.3.3-teal?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-
-ELVORA MOTORS is a full-stack premium automotive platform. It provides a high-end experience for users to browse and interact with a luxury car fleet, while offering a powerful, data-driven dashboard for admins to manage the entire business logic.
+![Hero](https://github.com/user-attachments/assets/8b5ad2b1-5538-4a35-9a32-c70b7e13d602)
 
 ---
 
-##  Key Features
+## Live Demo
 
-###  User Side
-- **Modern Landing Page**: Multiple sections showcasing the brand's identity and premium car collections.
-- **Dynamic Product Catalog**: Real-time car listing with advanced caching using React Query.
-- **Deep Linking**: Detailed view for each vehicle with technical specifications and pricing.
-- **Smart Contact System**: Concierge form with three distinct flows: Purchase, Booking, or Selling.
-- **Email Integration**: User requests are sent directly to the admin’s email.
-
-###  Admin Terminal (Dashboard)
-- **Role-Based Access Control (RBAC)**: Secure authentication; only Admins can access the dashboard.
-- **Comprehensive Overview**: Analytics for total users, daily sign-ups, and monthly growth tracking.
-- **Real-Time Counters**: Admin counts, total products, and stock availability.
-- **User Management**: Complete CRUD operations for platform users.
-- **Fleet Management**: Professional control over car listings, including multi-field forms and image uploading.
-- **Data Portability**: Export user and product tables to Excel files for offline reporting.
-- **Advanced UI**: Integrated pagination and optimized table views for large datasets.
+Frontend: https://elvora-motors.vercel.app/
 
 ---
 
-##  Tech Stack & Architecture
-- **Frontend**: React.js, Tailwind CSS (Custom Dark Theme), Framer Motion.
-- **Backend**: Laravel API.
-- **State Management**: TanStack Query (React Query) for efficient caching and synchronization.
-- **API Layer**: Axios Instance with automatic JWT/Sanctum token injection.
-- **Security**: Environment variables (`.env`) for sensitive credentials.
+## Overview
+
+ELVORA MOTORS is a full-stack automotive platform built to simulate a real-world luxury car business environment.
+
+The system provides a modern customer experience for browsing vehicles and a secure administrative dashboard for managing inventory, users, and business operations.
+
+This project focuses on scalable architecture, performance optimization, and production-level frontend practices.
 
 ---
+
+## Features
+
+### User Application
+
+* Responsive modern landing page
+* Dynamic vehicle catalog powered by API
+* Car details with full specifications and pricing
+* Contact system for purchase, booking, and selling requests
+* Form validation and validation handling
+* Loading, error, and empty states
+* Data caching and background refetch using TanStack Query
+
+---
+
+### Admin Dashboard
+
+* Authentication using Laravel Sanctum
+* Protected routes with role-based access
+* Full CRUD operations for vehicles
+* Multi-image upload support
+* Server-side pagination for large datasets
+* Real-time customer request management
+* Export data to Excel for reporting
+
+---
+
+## Tech Stack
+
+### Frontend
+
+* React.js
+* Tailwind CSS
+* TanStack Query (React Query)
+* Axios
+* React Hook Form
+* Framer Motion
+
+### Backend
+
+* Laravel (RESTful API)
+* Laravel Sanctum
+
+### Database
+
+* MySQL
+
+---
+
+## Project Architecture
+
+* Feature-based folder structure
+* Separation between API layer and UI components
+* Centralized Axios configuration with interceptors
+* Server state managed using TanStack Query
+* Reusable and modular components
+* Protected routes for authenticated users
+* Centralized error handling
+
+---
+
+## Performance Optimization
+
+* Server-side pagination for large datasets
+* API response caching
+* Background data refetch
+* Optimized rendering and component structure
+* Reduced unnecessary API calls using React Query
+
+---
+---
+
+## Screenshots
+
+### Landing Page
+
+![Landing](https://github.com/user-attachments/assets/0a9a9152-9a0f-46b0-9ab3-f841c7df1c04)
+
+### Car Collection
+
+![Collection](https://github.com/user-attachments/assets/63953dcb-bdcb-44fb-97a2-172985b241b6)
+
+### Car Details
+
+![Details](https://github.com/user-attachments/assets/0882e832-0920-4073-a84b-de062f3d1972)
+
+### Admin Dashboard
+
+![Dashboard](https://github.com/user-attachments/assets/14fa80cc-0e98-4bb1-80c5-b49f378c7dc2)
+
+---
+
+## Installation
+
+### Frontend
+
+```bash
+git clone https://github.com/AbdulrhamnAhmed29/Elvora-Motors.git
+cd Elvora-Motors
+npm install
+npm run dev
+```
+
+### Backend
+
+```bash
+git clone https://github.com/AbdulrhamnAhmed29/Elvora-Motors-Backend.git
+cd Elvora-Motors-Backend
+composer install
+php artisan migrate
+php artisan serve
+```
+
+---
+
+## Environment Variables
+
+Frontend `.env`
+
+```
+VITE_API_BASE_URL=your_api_url
+```
+
+Backend `.env`
+
+```
+DB_DATABASE=your_db
+DB_USERNAME=your_user
+DB_PASSWORD=your_password
+SANCTUM_STATEFUL_DOMAINS=your_frontend_domain
+```
+
+---
+
+## Author
+
+**Abdulrhman Ahmed**
+Frontend Developer
