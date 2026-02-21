@@ -31,7 +31,7 @@ const TestimonialsSection = () => {
                 {/* Header */}
                 <div className="text-center mb-20">
                     <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter italic text-white mb-4">
-                        Client <span className="text-gray-500">Stories</span>
+                        users <span className="text-gray-500"> Reviews</span>
                     </h2>
                     <div className="w-20 h-[2px] bg-white mx-auto mb-6"></div>
                     <p className="text-gray-400 font-light tracking-widest uppercase text-xs">

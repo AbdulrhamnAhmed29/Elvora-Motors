@@ -9,7 +9,7 @@ import { createProduct } from '../../../APi/ProductsRequests';
 function AddNewProduct() {
     const navigate = useNavigate();
     const [preview, setPreview] = useState(null); 
-    const { handleSubmit, register,  setValue, formState: { errors } } = useForm();
+    const { handleSubmit, register, reset, setValue, formState: { errors } } = useForm();
     const queryClient = useQueryClient();
 
     
@@ -34,6 +34,7 @@ function AddNewProduct() {
             });
             queryClient.invalidateQueries({ queryKey: ["products"] });
             navigate("/dashboard/products");
+            
         },
         onError: (error) => {
             Swal.fire({

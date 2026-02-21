@@ -1,12 +1,10 @@
 # ELVORA MOTORS - Luxury Car Management System
 
-![Hero](https://github.com/user-attachments/assets/8b5ad2b1-5538-4a35-9a32-c70b7e13d602)
-
 ---
 
 ## Live Demo
 
-Frontend: https://elvora-motors.vercel.app/
+Frontend: [https://elvora-motors.vercel.app/](https://elvora-motors.vercel.app/)
 
 ---
 
@@ -89,7 +87,6 @@ This project focuses on scalable architecture, performance optimization, and pro
 * Reduced unnecessary API calls using React Query
 
 ---
----
 
 ## Screenshots
 
@@ -120,40 +117,3 @@ git clone https://github.com/AbdulrhamnAhmed29/Elvora-Motors.git
 cd Elvora-Motors
 npm install
 npm run dev
-```
-
-### Backend
-
-```bash
-git clone https://github.com/AbdulrhamnAhmed29/Elvora-Motors-Backend.git
-cd Elvora-Motors-Backend
-composer install
-php artisan migrate
-php artisan serve
-```
-
----
-
-## Environment Variables
-
-Frontend `.env`
-
-```
-VITE_API_BASE_URL=your_api_url
-```
-
-Backend `.env`
-
-```
-DB_DATABASE=your_db
-DB_USERNAME=your_user
-DB_PASSWORD=your_password
-SANCTUM_STATEFUL_DOMAINS=your_frontend_domain
-```
-
----
-
-## Author
-
-**Abdulrhman Ahmed**
-Frontend Developer

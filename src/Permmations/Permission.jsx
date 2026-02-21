@@ -1,16 +1,35 @@
-import { Outlet, Navigate } from "react-router-dom"; // استورد Navigate
+import { Outlet, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import Cookies from "js-cookie";
+import Swal from "sweetalert2";
 
 const RequireAdmin = () => {
-    const userType = Cookies.get("type"); 
-    const token = Cookies.get("token");   
+    const userType = Cookies.get("type");
+    const token = Cookies.get("token");
+    const navigate = useNavigate();
 
-    if (token && userType === "admin") {
-        return <Outlet />; 
-    }
+    const isAdmin = token && userType === "admin";
 
-    
-    return <Navigate to="/" replace />;
+    useEffect(() => {
+        if (!isAdmin) {
+            Swal.fire({
+                title: 'ACCESS DENIED',
+                text: ' You do not have the required permissions to access this terminal.',
+                icon: 'error',
+                background: "#000",
+                color: "#fff",
+                confirmButtonColor: "#fff",
+                confirmButtonText: "<span style='color:black; font-weight:bold'>RETURN HOME</span>",
+                allowOutsideClick: false, 
+            }).then((result) => {
+                if (result.isConfirmed || result.isDismissed) {
+                    navigate("/", { replace: true });
+                }
+            });
+        }
+    }, [isAdmin, navigate]);
+
+    return isAdmin ? <Outlet /> : null;
 };
 
 export default RequireAdmin;

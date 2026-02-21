@@ -2,8 +2,6 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 const baseURL = process.env.REACT_APP_API_URL;
-
-// 1. دي الـ Instance القديمة (للمسارات المحمية فقط - Admin/User)
 const API = axios.create({
     baseURL: baseURL,
     headers: { 'Accept': 'application/json' }

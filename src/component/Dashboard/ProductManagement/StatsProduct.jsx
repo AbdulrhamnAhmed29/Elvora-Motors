@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { getProductStats } from '../../../APi/ProductsRequests';
-import { FaCheckCircle, FaTimesCircle, FaCar } from "react-icons/fa";
+import { FaCheckCircle, FaCar } from "react-icons/fa";
 
 function StatsProduct() {
     const { data: stats, isLoading, isError } = useQuery({
@@ -36,12 +36,7 @@ function StatsProduct() {
             icon: <FaCheckCircle />, 
             desc: "Ready for protocol" 
         },
-        { 
-            label: "Un Available Products", 
-            value: stats?.not_available_cars ?? 0, 
-            icon: <FaTimesCircle />, 
-            desc: "Reserved or Maintenance" 
-        }
+  
     ];
 
     return (

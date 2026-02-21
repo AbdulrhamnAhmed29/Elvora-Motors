@@ -34,7 +34,7 @@ const FAQSection = () => {
                 {/* Header */}
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4">
-                        Common <span className="text-gray-500">Inquiries</span>
+                        public <span className="text-gray-500">questions</span>
                     </h2>
                     <p className="text-gray-400 font-light tracking-widest uppercase text-sm">
                         Everything you need to know before you drive away

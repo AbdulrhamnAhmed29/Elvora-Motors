@@ -5,6 +5,7 @@ const API = axios.create({
     baseURL: process.env.REACT_APP_API_URL,
     headers: {
         'Accept': 'application/json',
+        'Content-Type': 'application/json',
     }
 });
 
@@ -24,9 +25,8 @@ API.interceptors.request.use((config) => {
 // ---------- Products (Admin) ----------
 // get all products 
 export const getProducts = async () => {
-   const res=  await API.get("/product/show");
-   
-   return res.data
+    const res = await API.get("/product/show");
+    return res.data
 };
 // get one product 
 export const getProductById = async (id) => (await API.get(`/product/showbyid/${id}`)).data;
@@ -49,7 +49,7 @@ export const deleteProduct = async (id) => {
 };
 export const getProductStats = async () => {
     const res = await API.get('/product/stats');
-    return res.data; 
+    return res.data;
 };
 
 

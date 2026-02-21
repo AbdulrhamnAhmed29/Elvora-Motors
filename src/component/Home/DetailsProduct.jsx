@@ -130,13 +130,13 @@ function DetailsProduct() {
                             onClick={handleWhatsApp}
                             className="flex-1 bg-white text-black font-black uppercase text-[10px] tracking-[0.3em] py-6 flex items-center justify-center gap-3 hover:bg-stone-200 transition-all"
                         >
-                            <FaWhatsapp size={16} /> Inquire Status
+                            <FaWhatsapp size={16} />WhatsApp
                         </button>
                         <a
                             href="tel:+201116045357" 
                             className="flex-1 border border-white/10 hover:border-white/40 text-white font-black uppercase text-[10px] tracking-[0.3em] py-6 transition-all flex items-center justify-center gap-3"
                         >
-                            <FaPhoneAlt size={12} /> Contact Agent
+                            <FaPhoneAlt size={12} /> Contact by Phone
                         </a>
                     </div>
                 </div>

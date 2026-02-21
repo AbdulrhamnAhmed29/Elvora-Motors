@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaGasPump, FaCogs, FaTachometerAlt } from "react-icons/fa";
 import { useQuery } from "@tanstack/react-query";
-import {  getProductsToUsers } from "../../APi/PuplicRequests";
+import { getProductsToUsers } from "../../APi/PuplicRequests";
 import { Link } from "react-router-dom";
 
 function ShowCars() {
@@ -14,22 +14,30 @@ function ShowCars() {
     queryKey: ["ProductToUser"],
     queryFn: getProductsToUsers,
     refetchOnWindowFocus: true,
-    refetchInterval: 1000, 
+    refetchInterval: 1000,
   });
 
   const Products = Userproducts || [];
 
   // Names for filter
-  const names = ["All", ...new Set(Products.map((car) => car.title || "Unknown"))];
+  const names = [
+    "All",
+    ...new Map(
+      Products.map((car) => {
+        const cleanTitle = (car.title || "Unknown").trim().toLowerCase();
+        return [cleanTitle, car.title || "Unknown"];
+      })
+    ).values(),
+  ];
 
   // Filter products by name
   const filteredCars =
     selectedName === "All"
       ? Products
       : Products.filter(
-          (car) =>
-            (car.title || "").toLowerCase() === selectedName.toLowerCase()
-        );
+        (car) =>
+          (car.title || "").toLowerCase() === selectedName.toLowerCase()
+      );
 
   // Pagination logic
   const indexOfLastCar = currentPage * carsPerPage;
@@ -39,7 +47,7 @@ function ShowCars() {
 
   const handleFilter = (name) => {
     setSelectedName(name);
-    setCurrentPage(1); 
+    setCurrentPage(1);
   };
 
   if (isLoading)
@@ -73,11 +81,10 @@ function ShowCars() {
             <button
               key={i}
               onClick={() => handleFilter(name)}
-              className={`px-8 py-2 text-xs font-black uppercase tracking-widest transition-all duration-300 rounded-sm border ${
-                selectedName === name
-                  ? "bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.3)]"
-                  : "bg-transparent text-gray-500 border-white/10 hover:border-white hover:text-white"
-              }`}
+              className={`px-8 py-2 text-xs font-black uppercase tracking-widest transition-all duration-300 rounded-sm border ${selectedName === name
+                ? "bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+                : "bg-transparent text-gray-500 border-white/10 hover:border-white hover:text-white"
+                }`}
             >
               {name}
             </button>
@@ -94,11 +101,12 @@ function ShowCars() {
               {/* Image */}
               <div className="relative h-64 overflow-hidden">
                 <img
+                  loading="lazy"
                   src={product.image || "/placeholder.png"}
                   alt={product.name || "Unnamed Car"}
                   className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
                 />
-          
+
               </div>
 
               {/* Content */}
@@ -136,7 +144,7 @@ function ShowCars() {
                     </span>
                   </p>
                   <button className="text-xs font-bold uppercase tracking-widest text-white border-b border-white/20 hover:border-white transition-all pb-1">
-                 <Link to={`/details/${product.id}`} >   Details</Link>
+                    <Link to={`/details/${product.id}`} >   Details</Link>
                   </button>
                 </div>
               </div>
@@ -155,11 +163,10 @@ function ShowCars() {
                   .getElementById("pro")
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
-              className={`w-10 h-10 flex items-center justify-center text-xs font-bold transition-all duration-300 ${
-                currentPage === i + 1
-                  ? "bg-white text-black shadow-[0_0_15px_rgba(255,255,255,0.2)]"
-                  : "bg-transparent text-gray-500 border border-white/10 hover:border-white hover:text-white"
-              }`}
+              className={`w-10 h-10 flex items-center justify-center text-xs font-bold transition-all duration-300 ${currentPage === i + 1
+                ? "bg-white text-black shadow-[0_0_15px_rgba(255,255,255,0.2)]"
+                : "bg-transparent text-gray-500 border border-white/10 hover:border-white hover:text-white"
+                }`}
             >
               {i + 1}
             </button>
