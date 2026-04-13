@@ -14,11 +14,12 @@ function ShowCars() {
     queryKey: ["ProductToUser"],
     queryFn: getProductsToUsers,
     refetchOnWindowFocus: true,
-    refetchInterval: 1000,
+
   });
 
   const Products = Userproducts || [];
-
+    console.log(Products);
+  
   // Names for filter
   const names = [
     "All",
