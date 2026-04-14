@@ -14,8 +14,8 @@ function ShowCars() {
     queryKey: ["ProductToUser"],
     queryFn: getProductsToUsers,
     refetchOnWindowFocus: true,
-
   });
+  console.log(Userproducts);
 
   const Products = Userproducts || [];
     console.log(Products);
